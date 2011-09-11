@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  content: MyText
+  parent: 1
+  checked: false
+  order: 1
+
+two:
+  user_id: 1
+  content: MyText
+  parent: 1
+  checked: false
+  order: 1

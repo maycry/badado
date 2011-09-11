@@ -1,0 +1,25 @@
+%h1 Listing items
+
+%table
+  %tr
+    %th User
+    %th Content
+    %th Parent
+    %th Checked
+    %th Order
+    %th
+    %th
+    %th
+
+  - @items.each do |item|
+    %tr
+      %td= item.user_id
+      %td= item.content
+      %td= item.parent
+      %td= item.checked
+      %td= item.order
+      %td= link_to 'Show', item
+      %td= link_to 'Edit', edit_item_path(item)
+      %td= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete
+
+= link_to 'New Item', new_item_path

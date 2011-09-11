@@ -1,0 +1,25 @@
+%p#notice= notice
+
+%p
+  %b User
+  = @item.user_id
+  
+%p
+  %b Content 
+  = @item.content
+  
+%p
+  %b Parent 
+  = @item.parent
+  
+%p
+  %b Checked
+  = @item.checked
+
+%p
+  %b Order
+  = @item.order
+
+
+= link_to 'Edit', edit_item_path(@item)
+= link_to 'Back', items_path
