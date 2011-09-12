@@ -30,7 +30,6 @@ GEM
       activesupport (= 3.1.0)
     activesupport (3.1.0)
       multi_json (~> 1.0)
-    annotate (2.4.0)
     arel (2.2.1)
     bcrypt-ruby (3.0.0-x86-mingw32)
     builder (3.0.0)
@@ -108,7 +107,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  annotate
   coffee-rails (~> 3.1.0)
   haml
   jquery-rails
