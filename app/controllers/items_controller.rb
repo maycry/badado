@@ -1,10 +1,12 @@
 class ItemsController < ApplicationController
+  before_filter :require_login
+  
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.scoped
 
-    respond_to do |format|
+      respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @items }
     end
@@ -24,7 +26,7 @@ class ItemsController < ApplicationController
   # GET /items/new
   # GET /items/new.json
   def new
-    @item = Item.new
+    @item = Item.new(:parent_id => params[:parent_id], :user_id => params[:user_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,8 +46,8 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, :notice => 'Item was successfully created.' }
-        format.json { render :json => @item, :status => :created, :location => @item }
+        format.html { redirect_to items_path, :notice => 'Item was successfully created.' }
+        format.json { render :json => items_path, :status => :created, :location => @item }
       else
         format.html { render :action => "new" }
         format.json { render :json => @item.errors, :status => :unprocessable_entity }

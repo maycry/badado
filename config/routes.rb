@@ -5,6 +5,7 @@ Badado::Application.routes.draw do
   get "signup" => "users#new", :as => "signup"
   resources :users
   resources :sessions
-
   resources :items
+  
+  root :to => "home#index" 
 end

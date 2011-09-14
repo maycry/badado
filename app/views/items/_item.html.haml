@@ -1,0 +1,6 @@
+.item
+  = item.ancestry
+  = link_to 'New task', new_item_path(:parent_id => item, :user_id => current_user)
+  = link_to 'Show', item
+  = link_to 'Edit', edit_item_path(item)
+  = link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete

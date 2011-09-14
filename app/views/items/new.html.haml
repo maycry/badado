@@ -1,5 +1,7 @@
 %h1 New item
 
+= render @item.parent if @item.parent 
+
 = render 'form'
 
 = link_to 'Back', items_path
