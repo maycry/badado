@@ -5,8 +5,11 @@ gem 'sqlite3'
 gem 'json'
 gem 'haml'
 gem 'pg'
-gem 'therubyracer'
 gem 'jquery-rails'
+
+group :production do
+  #gem 'therubyracer'
+end
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
@@ -14,3 +17,5 @@ group :assets do
   gem 'uglifier'
 end
 
+gem 'sorcery'
+gem 'ancestry'

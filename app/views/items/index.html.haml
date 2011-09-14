@@ -2,9 +2,9 @@
 
 %table
   %tr
+    %th ID
     %th User
     %th Content
-    %th Parent
     %th Checked
     %th Order
     %th
@@ -13,9 +13,9 @@
 
   - @items.each do |item|
     %tr
+      %td= item.id
       %td= item.user_id
       %td= item.content
-      %td= item.parent
       %td= item.checked
       %td= item.order
       %td= link_to 'Show', item
