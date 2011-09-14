@@ -5,8 +5,8 @@ gem 'sqlite3'
 gem 'json'
 gem 'haml'
 gem 'pg'
-gem 'therubyracer'
 gem 'jquery-rails'
+gem 'sorcery'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
